@@ -5,7 +5,7 @@ function copySelection() {
     let selectedText = window.getSelection().toString().trim();
 
     if (selectedText) {
-        document.execCommand("Copy");
+        navigator.clipboard.writeText();
     }
 }
 
