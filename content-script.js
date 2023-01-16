@@ -6,6 +6,7 @@ function copySelection() {
 
     if (selectedText) {
         navigator.clipboard.writeText(selectedText);
+        console.log(navigator.clipboard.writeText(selectedText))
     }
 }
 
