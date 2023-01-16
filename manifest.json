@@ -12,5 +12,16 @@
     "content_scripts": [{
         "matches": ["*://*.angel.co/*"],
         "js": ["content-script.js"]
-    }]
+    }],
+
+    "browser_action": {
+        "default_icon": "icons/beasts-32.png",
+        "theme_icons": [{
+            "light": "icons/beasts-32-light.png",
+            "dark": "icons/beasts-32.png",
+            "size": 32
+        }],
+        "default_title": "save-data",
+        "default_popup": "popup/popup.html"
+      }
 }
