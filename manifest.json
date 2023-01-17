@@ -23,5 +23,5 @@
         }],
         "default_title": "save-data",
         "default_popup": "popup/popup.html"
-      }
+      } 
 }

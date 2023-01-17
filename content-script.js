@@ -1,29 +1,24 @@
-/*
-copy the selected text to clipboard
-*/
+// import { saveJSON, loadJSON } from "./readwritejson";
+
 let nextId = 0;
-data = [{ id: "", value: ""}];
+data = [];
+
 function copySelection() {
-  
-  
   let selectedText = window.getSelection().toString().trim();
   console.log(data);
 
   if (selectedText) {
     navigator.clipboard.writeText(selectedText);
 
-    data.push( { id: nextId++, value: selectedText });
+    data.push({ id: nextId++, value: selectedText });
   }
 }
 
 function listenForClicks() {
-    alert ("Hello World!");
-       };
-  
+  alert("Hello World!");
+  // const info = loadJSON("results.json");
+  // data.forEach((item) => info.information.push(item));
+  // saveJSON('results.json',info)
+}
 
-/*
-Add copySelection() as a listener to mouseup events.
-*/
-document.addEventListener("mouseup", copySelection)
-// .then(listenForClicks)
-document.getElementById("myBtn").addEventListener("click", listenForClicks());
+document.addEventListener("mouseup", copySelection);
